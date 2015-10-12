@@ -132,6 +132,15 @@ bmap.setMapStyle({
         stylers: {
             color: '#1e1c1c'
         }
-    }]
+    },
+    	          {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": {
+                              "color": "#000000",
+                              "visibility": "off"
+                    }
+          }
+    ]
 });
 
