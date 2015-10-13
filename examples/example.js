@@ -6,10 +6,7 @@ var bmap = new BMap.Map('map', {
 });
 
 bmap.enableScrollWheelZoom(); // 启用滚轮放大缩小
-
-bmap.getContainer().style.background = '#081734';
-bmap.setMapStyle({
-    styleJson: [{
+var mydefault = [{
         featureType: 'water',
         elementType: 'all',
         stylers: {
@@ -140,5 +137,8 @@ bmap.setMapStyle({
                               "visibility": "off"
                     }
           }]
+bmap.getContainer().style.background = '#081734';
+bmap.setMapStyle({
+    styleJson: mydefault
 });
 
