@@ -11,6 +11,10 @@ html,body{
     height:100%;
 }
 
+.BMap_cpyCtrl{
+    display:none;
+}
+
 #panel{
     list-style:none;
     position:absolute;
