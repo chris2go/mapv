@@ -39,3 +39,29 @@ html,body{
 #panel li.current{
     background:rgba(0, 0, 255, 0.5);
 }
+
+.box img {
+vertical-align:middle; }
+.slider{background: #d5d5d5;position: relative;cursor: pointer;width: 100%;clear: right;top: 0px;-moz-border-radius: 5px;-webkit-border-radius: 5px;    -moz-box-shadow: inset 0 0 8px #000;margin: 10px 0 10px 0;}
+.progress{height: 7px;position: relative;background: #5389c5; }
+.handle{background: url(http://pic.yupoo.com/weiyqchris2012/EfqObIg6/medish.jpg) repeat-x center;height: 16px;width: 16px;top: -5px;position: absolute;display: block;margin-top: 1px;cursor: pointer;}
+.range{display: none;}
+* { font-family:  'Arial'; font-size: 9px;padding: 0; }
+ul.expmenu { width: 113px; }
+ul.expmenu * { list-style: none; }
+ul.expmenu > li > div.header { padding: 10px; border-bottom: 1px #396e9f solid; }
+ul.expmenu > li:last-child > div.header { border-bottom: none; }
+ul.expmenu > li ul li { background-color: #f1f1f1; padding: 3px; border-bottom: 1px solid #dcdcdc; border-top: 1px solid #fff; color: #727272; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8); }
+ul.expmenu > li ul li:last-child { border-bottom: none; }
+ul.expmenu > li ul li.selected { background-color: #f4f4f4; }
+ul.expmenu div.header
+{color: #203f61;text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);background: #4d7fb8;}
+ul.expmenu > li > div.header > .label { padding-left: 24px; background: no-repeat; }
+ul.expmenu > li > div.header > .arrow { display: block; width: 16px; height: 16px; background: no-repeat center; float: right; }
+ul.expmenu > li > div.header > .arrow.up { background-image: url(http://pic.yupoo.com/weiyqchris2012/Efz3h0Zc/medish.jpg); }
+ul.expmenu > li > div.header > .arrow.down { background-image: url(http://pic.yupoo.com/weiyqchris2012/Efz32XTB/medish.jpg); }
+ul.expmenu div.header:hover
+{background: #4571a0;cursor: pointer;}
+ul.expmenu > li ul li:not(.selected):hover
+{background: #e3e3e3; cursor: pointer;}
+div#content { display: table; margin: 0 auto; padding: 10px; margin-left: 5px;}
