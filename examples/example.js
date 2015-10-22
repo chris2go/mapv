@@ -165,7 +165,7 @@ var dark1 = [
           }
 ]
 
-var bluish = [
+var bluish1 = [
           {
                     "featureType": "all",
                     "elementType": "geometry",
