@@ -456,7 +456,7 @@ var mydefault1 = [{
           
           
           
-var mydefault = [{
+var mydefault11 = [{
         featureType: 'water',
         elementType: 'all',
         stylers: {
