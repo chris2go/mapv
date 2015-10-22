@@ -322,7 +322,7 @@ var hardedge1 = [
 ]
 
 
-var mydefault = [{
+var mydefault1 = [{
         featureType: 'water',
         elementType: 'all',
         stylers: {
