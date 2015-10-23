@@ -4,7 +4,29 @@ var bmap = new BMap.Map('map', {
     minZoom: 4
     //vectorMapLevel: 3
 });
-
+function changeMapStyle(style){ 
+bmap.setMapStyle({style:style});
+if (style.indexOf('1')>0){
+if (style == 'mydefault11'){
+bmap.setMapStyle({styleJson:mydefault11}); }
+if (style == 'mydefault1'){
+bmap.setMapStyle({styleJson:mydefault1}); }
+if (style == 'normal1'){
+bmap.setMapStyle({styleJson:normal1}); }
+if (style == 'dark1'){
+bmap.setMapStyle({styleJson:dark1}); }
+if (style == 'bluish1'){
+bmap.setMapStyle({styleJson:bluish1}); }
+if (style == 'grayscale1'){
+bmap.setMapStyle({styleJson:grayscale1}); }
+if (style == 'hardedge1'){
+bmap.setMapStyle({styleJson:hardedge1}); }
+obj = document.getElementById('stylelist');
+for(i=0;i<obj.length;i++){
+if(obj[i].value==style)
+ obj[i].selected = true;
+}
+}} 
 bmap.enableScrollWheelZoom(); // 启用滚轮放大缩小
 
 var normal1 = [
