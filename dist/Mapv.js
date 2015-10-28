@@ -2552,7 +2552,7 @@ ChoroplethDrawer.prototype.drawMap = function () {
                     ctx.fillStyle = label.fillStyle;
                 }
                 var center = util.getGeoCenter(geo);
-                ctx.fillText(data[i].name, center[0], center[1]);
+                ctx.fillText(data[i].count, center[0], center[1]);
             }
         }
     } else {
@@ -3530,7 +3530,7 @@ IntensityDrawer.prototype.drawMap = function () {
                     ctx.fillStyle = label.fillStyle;
                 }
                 var center = util.getGeoCenter(geo);
-                ctx.fillText(data[i].name, center[0], center[1]);
+                ctx.fillText(data[i].count, center[0], center[1]);
             }
         }
     } else {
@@ -3835,7 +3835,7 @@ SimpleDrawer.prototype.drawMap = function (time) {
             if (label.font) {
                 ctx.font = label.font;
             }
-            var labelKey = label.key || 'name';
+            var labelKey = label.key || 'count';
         }
 
         var animationOptions = this.getLayer().getAnimationOptions() || {};
@@ -3892,6 +3892,8 @@ SimpleDrawer.prototype.drawMap = function (time) {
     } else {
         // 画点
 
+        var icon = drawOptions.icon;
+
         if (drawOptions.strokeStyle || drawOptions.globalCompositeOperation) {
             // 圆描边或设置颜色叠加方式需要一个个元素进行绘制
             for (var i = 0, len = data.length; i < len; i++) {
@@ -3901,8 +3903,12 @@ SimpleDrawer.prototype.drawMap = function (time) {
                 }
                 ctx.beginPath();
                 ctx.moveTo(item.px, item.py);
-                ctx.arc(item.px, item.py, radius, 0, 2 * Math.PI, false);
-                ctx.fill();
+                if (icon && icon.show && icon.url) {
+                    this.drawIcon(ctx, item, icon);
+                } else {
+                    ctx.arc(item.px, item.py, radius, 0, 2 * Math.PI, false);
+                    ctx.fill();
+                }
                 if (drawOptions.strokeStyle) {
                     ctx.stroke();
                 }
@@ -3915,10 +3921,14 @@ SimpleDrawer.prototype.drawMap = function (time) {
                     continue;
                 }
                 ctx.moveTo(item.px, item.py);
-                if (radius < 2) {
-                    ctx.fillRect(item.px, item.py, radius * 2, radius * 2);
+                if (icon && icon.show && icon.url) {
+                    this.drawIcon(ctx, item, icon);
                 } else {
-                    ctx.arc(item.px, item.py, radius, 0, 2 * Math.PI, false);
+                    if (radius < 2) {
+                        ctx.fillRect(item.px, item.py, radius * 2, radius * 2);
+                    } else {
+                        ctx.arc(item.px, item.py, radius, 0, 2 * Math.PI, false);
+                    }
                 }
             }
 
@@ -3927,6 +3937,25 @@ SimpleDrawer.prototype.drawMap = function (time) {
     }
 
     this.endDrawMap();
+};
+
+// 绘制icon
+SimpleDrawer.prototype.drawIcon = function (ctx, item, icon) {
+    var image = new Image();
+    var sx = icon.sx || 0;
+    var sy = icon.sy || 0;
+    var px = icon.px || 0;
+    var py = icon.py || 0;
+    var swidth = icon.swidth || 0;
+    var sheight = icon.sheight || 0;
+    var width = icon.width || 0;
+    var height = icon.height || 0;
+    (function (item, sx, sy, swidth, sheight, width, height) {
+        image.onload = function () {
+            ctx.drawImage(image, sx, sy, swidth, sheight, item.px - width / 2 - px, item.py - height / 2 - py, width, height);
+        };
+    })(item, sx, sy, swidth, sheight, width, height);
+    image.src = icon.url;
 };
 
 /**
