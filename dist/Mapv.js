@@ -2552,7 +2552,7 @@ ChoroplethDrawer.prototype.drawMap = function () {
                     ctx.fillStyle = label.fillStyle;
                 }
                 var center = util.getGeoCenter(geo);
-                ctx.fillText(data[i].count, center[0], center[1]);
+                ctx.fillText(data[i].geo, center[0], center[1]);
             }
         }
     } else {
@@ -3530,7 +3530,7 @@ IntensityDrawer.prototype.drawMap = function () {
                     ctx.fillStyle = label.fillStyle;
                 }
                 var center = util.getGeoCenter(geo);
-                ctx.fillText(data[i].count, center[0], center[1]);
+                ctx.fillText(data[i].geo, center[0], center[1]);
             }
         }
     } else {
@@ -3835,7 +3835,7 @@ SimpleDrawer.prototype.drawMap = function (time) {
             if (label.font) {
                 ctx.font = label.font;
             }
-            var labelKey = label.key || 'count';
+            var labelKey = label.key || 'geo';
         }
 
         var animationOptions = this.getLayer().getAnimationOptions() || {};
