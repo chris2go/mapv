@@ -4,40 +4,7 @@ var bmap = new BMap.Map('map', {
     minZoom: 4
     //vectorMapLevel: 3
 });
-//各类select当前选择
-function myTypeSelect(a,b,c,d,e,f){
-objpointlist = document.getElementById('pointlist');
-objpolylinelist = document.getElementById('polylinelist');
-objpolygonlist = document.getElementById('polygonlist');
-objadminarealist = document.getElementById('adminarealist');
-objcelllist = document.getElementById('celllist');
-objdtlist = document.getElementById('dtlist');
-for(i=0;i<objpointlist.length;i++){
-if(objpointlist[i].value.split('_')[1]== a){
-objpointlist[i].selected = true;}
-}
-for(i=0;i<objpolylinelist.length;i++){
-if(objpolylinelist[i].value.split('_')[1]== b){
-objpolylinelist[i].selected = true;}
-}
-for(i=0;i<objpolygonlist.length;i++){
-if(objpolygonlist[i].value.split('_')[1]== c){
-objpolygonlist[i].selected = true;}
-}
-for(i=0;i<objadminarealist.length;i++){
-if(objadminarealist[i].value.split('_')[1]== d){
-objadminarealist[i].selected = true;}
-}
-for(i=0;i<objcelllist.length;i++){
-if(objcelllist[i].value.split('_')[1]== e){
-objcelllist[i].selected = true;}
-}
-for(i=0;i<objdtlist.length;i++){
-if(objdtlist[i].value.split('_')[1]== f){
-objdtlist[i].selected = true;}
-}
-}
-///////
+
 
 function changeMapStyle(style){ 
 bmap.setMapStyle({style:style});
