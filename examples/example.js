@@ -60,7 +60,7 @@ if(document.getElementById('isVoronoiChecked').checked == false){
 $('.SvgOverlay svg').css('opacity',0);
 }
 else{
-$('.SvgOverlay svg').css('opacity',1);
+$('.SvgOverlay svg').css('opacity',document.getElementById('myslide').value/100);
 }
 }
 
