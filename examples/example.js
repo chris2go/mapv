@@ -5,7 +5,66 @@ var bmap = new BMap.Map('map', {
     //vectorMapLevel: 3
 });
 
+//图层控制
 
+function PointCheck(){
+if(document.getElementById('isPointChecked').checked == false){
+layerpoint.setMapv(null);
+}
+else{
+layerpoint.setMapv(mapv);
+}
+}
+
+function PolylineCheck(){
+if(document.getElementById('isPolylineChecked').checked == false){
+layerpolyline.setMapv(null);
+}
+else{
+layerpolyline.setMapv(mapv);
+}
+}
+
+function PolygonCheck(){
+console.log(document.getElementById('isPolygonChecked').checked);
+if(document.getElementById('isPolygonChecked').checked == false){
+layerpolygon.setMapv(null);
+}
+else{
+layerpolygon.setMapv(mapv);
+}
+}
+
+
+function CellCheck(){
+if(document.getElementById('isCellChecked').checked == false){
+layercell.setMapv(null);
+}
+else{
+layercell.setMapv(mapv);
+}
+}
+
+function DtCheck(){
+if(document.getElementById('isDtChecked').checked == false){
+layerdt.setMapv(null);
+}
+else{
+layerdt.setMapv(mapv);
+}
+}
+
+
+function VoronoiCheck(){
+if(document.getElementById('isVornoiChecked').checked == false){
+$('.SvgOverlay svg').css('opacity',0);
+}
+else{
+$('.SvgOverlay svg').css('opacity',1);
+}
+}
+
+//
 function changeMapStyle(style){ 
 bmap.setMapStyle({style:style});
 if (style.indexOf('1')>0){
