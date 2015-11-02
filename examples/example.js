@@ -56,7 +56,7 @@ layerdt.setMapv(mapv);
 
 
 function VoronoiCheck(){
-if(document.getElementById('isVornoiChecked').checked == false){
+if(document.getElementById('isVoronoiChecked').checked == false){
 $('.SvgOverlay svg').css('opacity',0);
 }
 else{
