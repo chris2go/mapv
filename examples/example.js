@@ -35,6 +35,13 @@ layerpolygon.setMapv(mapv);
 }
 }
 
+function AdminareaCheck(){
+if (document.getElementById('isAdminareaChecked').checked == true) {
+layeradmin.setMapv(mapv);}
+else{
+layeradmin.setMapv(null);
+}
+}
 
 function CellCheck(){
 if(document.getElementById('isCellChecked').checked == false){
