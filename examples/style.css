@@ -9,7 +9,7 @@ html,body{
 .BMap_mask {background-color:#000000;opacity:0 ;-webkit-transition: all 0.5s ease-in-out;transition: all 0.5s ease-in-out;}
 
 #info {
-font-family: Tohoma,Verdana, Geneva, sans-serif;
+font-family: Tahoma,Verdana, Geneva, sans-serif;
 font-size: 12px;
 color: #ffffff;
 }
