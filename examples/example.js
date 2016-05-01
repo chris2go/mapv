@@ -46,9 +46,11 @@ layeradmin.setMapv(null);
 function CellCheck(){
 if(document.getElementById('isCellChecked').checked == false){
 layercell.setMapv(null);
+layercellselect.setMapv(null);
 }
 else{
 layercell.setMapv(mapv);
+layercellselect.setMapv(nnnew);
 }
 }
 
