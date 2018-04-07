@@ -675,7 +675,7 @@ var mydefault11 = [{
           }]
 
 var test123 = [
- {
+          {
                     "featureType": "land",
                     "elementType": "geometry",
                     "stylers": {
