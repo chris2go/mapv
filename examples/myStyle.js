@@ -1,5 +1,6 @@
 var style1 = [
-{
+
+          {
                     "featureType": "land",
                     "elementType": "geometry",
                     "stylers": {
@@ -130,4 +131,5 @@ var style1 = [
                               "visibility": "off"
                     }
           }
+
 ]
