@@ -91,6 +91,8 @@ if (style == 'grayscale1'){
 bmap.setMapStyle({styleJson:grayscale1}); }
 if (style == 'hardedge1'){
 bmap.setMapStyle({styleJson:hardedge1}); }
+if (style == 'test123'){
+bmap.setMapStyle({styleJson:test123}); }
 obj = document.getElementById('stylelist');
 for(i=0;i<obj.length;i++){
 if(obj[i].value==style)
