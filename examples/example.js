@@ -91,8 +91,8 @@ if (style == 'grayscale1'){
 bmap.setMapStyle({styleJson:grayscale1}); }
 if (style == 'hardedge1'){
 bmap.setMapStyle({styleJson:hardedge1}); }
-if (style == 'lightGray'){
-bmap.setMapStyle({styleJson:lightGray}); }
+if (style == 'lightGray1'){
+bmap.setMapStyle({styleJson:lightGray1}); }
 obj = document.getElementById('stylelist');
 for(i=0;i<obj.length;i++){
 if(obj[i].value==style)
@@ -675,7 +675,7 @@ var mydefault11 = [{
                               "visibility": "off"
                     }
           }]
-var lightGray = [
+var lightGray1 = [
           {
                     "featureType": "water",
                     "elementType": "geometry.fill",
