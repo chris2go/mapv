@@ -1,5 +1,4 @@
-var style1 = [
-
+var dark2 = [
           {
                     "featureType": "land",
                     "elementType": "geometry",
@@ -131,5 +130,4 @@ var style1 = [
                               "visibility": "off"
                     }
           }
-
 ]
