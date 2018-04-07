@@ -676,14 +676,25 @@ var mydefault11 = [{
                     }
           }]
 
-var test123 =[{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
-
-
-
-
+var test123 =[{"featureType":"all",
+"elementType":"labels.text.fill",
+"stylers":{"saturation":36,"color":"#000000","lightness":40}},
+{"featureType":"all",
+"elementType":"labels.text.stroke",
+"stylers":{"visibility":"on","color":"#000000","lightness":16}},
+{"featureType":"all","elementType":"labels.icon","stylers":{"visibility":"off"}},
+{"featureType":"administrative","elementType":"geometry.fill","stylers":{"color":"#000000","lightness":20}},
+{"featureType":"administrative","elementType":"geometry.stroke","stylers":{"color":"#000000","lightness":17,"weight":1.2}},
+{"featureType":"landscape","elementType":"geometry","stylers":{"color":"#000000","lightness":20}},
+{"featureType":"poi","elementType":"geometry","stylers":{"color":"#000000","lightness":21}},
+{"featureType":"road.highway","elementType":"geometry.fill","stylers":{"color":"#000000","lightness":17}},
+{"featureType":"road.highway","elementType":"geometry.stroke","stylers":{"color":"#000000","lightness":29,"weight":0.2}},
+{"featureType":"road.arterial","elementType":"geometry","stylers":{"color":"#000000","lightness":18}},
+{"featureType":"road.local","elementType":"geometry","stylers":{"color":"#000000","lightness":16}},
+{"featureType":"transit","elementType":"geometry","stylers":{"color":"#000000","lightness":19}},
+{"featureType":"water","elementType":"geometry","stylers":{"color":"#000000","lightness":17}}]
 
 bmap.getContainer().style.background = '#081734';
-
 
 (function(a){a.tools=a.tools||{version:'v1.2.7'};var b;b=a.tools.rangeinput={conf:{min:0,max:100,step:'any',steps:0,value:0,precision:undefined,vertical:0,keyboard:!0,progress:!1,speed:100,css:{input:'range',slider:'slider',progress:'progress',handle:'handle'}}};var c,d;a.fn.drag=function(b){document.ondragstart=function(){return!1},b=a.extend({x:!0,y:!0,drag:!0},b),c=c||a(document).on('mousedown mouseup',function(e){var f=a(e.target);if(e.type=='mousedown'&&f.data('drag')){var g=f.position(),h=e.pageX-g.left,i=e.pageY-g.top,j=!0;
 c.on('mousemove.drag',function(a){var c=a.pageX-h,e=a.pageY-i,g={};b.x&&(g.left=c),b.y&&(g.top=e),j&&(f.trigger('dragStart'),j=!1),b.drag&&f.css(g),f.trigger('drag',[e,c]),d=f}),e.preventDefault()}else try{d&&d.trigger('dragEnd')}finally{c.off('mousemove.drag'),d=null}});return this.data('drag',!0)};function e(a,b){var c=Math.pow(10,b);return Math.round(a*c)/c}function f(a,b){var c=parseInt(a.css(b),10);if(c)return c;var d=a[0].currentStyle;return d&&d.width&&parseInt(d.width,10)}function g(a){var b=a.data('events');return b&&b.onSlide}function h(b,c){var d=this,h=c.css,i=a("<div><div/><a href='#'/></div>").data('rangeinput',d),j,k,l,m,n;b.before(i);
