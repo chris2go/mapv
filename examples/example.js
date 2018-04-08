@@ -93,6 +93,8 @@ if (style == 'hardedge1'){
 bmap.setMapStyle({styleJson:hardedge1}); }
 if (style == 'lightGray1'){
 bmap.setMapStyle({styleJson:lightGray1}); }
+if (style == 'darkBlue1'){
+bmap.setMapStyle({styleJson:darkBlue1}); }
 obj = document.getElementById('stylelist');
 for(i=0;i<obj.length;i++){
 if(obj[i].value==style)
@@ -810,6 +812,24 @@ var lightGray1 = [
           }
 ]
 
+var darkBlue = [{"featureType":"water","elementType":"all","stylers":{"color":"#031628"}},
+{"featureType":"land","elementType":"geometry","stylers":{"color":"#000102"}},
+{"featureType":"highway","elementType":"geometry.fill","stylers":{"color":"#000000"}},
+{"featureType":"highway","elementType":"geometry.stroke","stylers":{"color":"#147a92"}},
+{"featureType":"arterial","elementType":"geometry.fill","stylers":{"color":"#000000"}},
+{"featureType":"arterial","elementType":"geometry.stroke","stylers":{"color":"#0b3d51"}},
+{"featureType":"local","elementType":"geometry","stylers":{"color":"#000000"}},
+{"featureType":"railway","elementType":"geometry.fill","stylers":{"color":"#000000"}},
+{"featureType":"railway","elementType":"geometry.stroke","stylers":{"color":"#08304b"}},
+{"featureType":"subway","elementType":"geometry","stylers":{"lightness":-70}},
+{"featureType":"building","elementType":"geometry.fill","stylers":{"color":"#000000"}},
+{"featureType":"all","elementType":"labels.text.fill","stylers":{"color":"#857f7f"}},
+{"featureType":"all","elementType":"labels.text.stroke","stylers":{"color":"#000000"}},
+{"featureType":"building","elementType":"geometry","stylers":{"color":"#022338"}},
+{"featureType":"green","elementType":"geometry","stylers":{"color":"#062032"}},
+{"featureType":"boundary","elementType":"all","stylers":{"color":"#465b6c"}},
+{"featureType":"manmade","elementType":"all","stylers":{"color":"#022338"}},
+{"featureType":"label","elementType":"all","stylers":{"color":"#022338","visibility":"off"}}]
 bmap.getContainer().style.background = '#081734';
 
 (function(a){a.tools=a.tools||{version:'v1.2.7'};var b;b=a.tools.rangeinput={conf:{min:0,max:100,step:'any',steps:0,value:0,precision:undefined,vertical:0,keyboard:!0,progress:!1,speed:100,css:{input:'range',slider:'slider',progress:'progress',handle:'handle'}}};var c,d;a.fn.drag=function(b){document.ondragstart=function(){return!1},b=a.extend({x:!0,y:!0,drag:!0},b),c=c||a(document).on('mousedown mouseup',function(e){var f=a(e.target);if(e.type=='mousedown'&&f.data('drag')){var g=f.position(),h=e.pageX-g.left,i=e.pageY-g.top,j=!0;
