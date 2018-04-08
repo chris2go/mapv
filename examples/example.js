@@ -812,7 +812,7 @@ var lightGray1 = [
           }
 ]
 
-var darkBlue = [{"featureType":"water","elementType":"all","stylers":{"color":"#031628"}},
+var darkBlue1 = [{"featureType":"water","elementType":"all","stylers":{"color":"#031628"}},
 {"featureType":"land","elementType":"geometry","stylers":{"color":"#000102"}},
 {"featureType":"highway","elementType":"geometry.fill","stylers":{"color":"#000000"}},
 {"featureType":"highway","elementType":"geometry.stroke","stylers":{"color":"#147a92"}},
