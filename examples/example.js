@@ -95,6 +95,8 @@ if (style == 'lightGray1'){
 bmap.setMapStyle({styleJson:lightGray1}); }
 if (style == 'darkBlue1'){
 bmap.setMapStyle({styleJson:darkBlue1}); }
+if (style == 'darkGray1'){
+bmap.setMapStyle({styleJson:darkGray1}); }
 obj = document.getElementById('stylelist');
 for(i=0;i<obj.length;i++){
 if(obj[i].value==style)
@@ -103,6 +105,21 @@ if(obj[i].value==style)
 }} 
 bmap.enableScrollWheelZoom(); // 启用滚轮放大缩小
 
+var darkGray1 = [{"featureType":"land","elementType":"geometry","stylers":{"color":"#212121"}},
+{"featureType":"building","elementType":"geometry","stylers":{"color":"#2b2b2b"}},
+{"featureType":"highway","elementType":"all","stylers":{"lightness":-75,"saturation":-91}},
+{"featureType":"arterial","elementType":"geometry","stylers":{"lightness":-82,"saturation":-94}},
+{"featureType":"green","elementType":"geometry","stylers":{"color":"#1b1b1b"}},
+{"featureType":"water","elementType":"geometry","stylers":{"color":"#181818"}},
+{"featureType":"subway","elementType":"all","stylers":{"lightness":-100,"saturation":-91}},
+{"featureType":"railway","elementType":"geometry","stylers":{"lightness":-84}},
+{"featureType":"all","elementType":"labels.text.stroke","stylers":{"color":"#313131"}},
+{"featureType":"all","elementType":"labels","stylers":{"color":"#8b8787","lightness":-19,"visibility":"off"}},
+{"featureType":"manmade","elementType":"geometry","stylers":{"color":"#1b1b1b"}},
+{"featureType":"local","elementType":"geometry","stylers":{"lightness":-97,"saturation":-100,"visibility":"off"}},
+{"featureType":"subway","elementType":"geometry","stylers":{"lightness":-76}},
+{"featureType":"railway","elementType":"all","stylers":{"lightness":-40,"visibility":"off"}},
+{"featureType":"boundary","elementType":"geometry","stylers":{"color":"#8b8787","weight":"1","lightness":-29}}]
 var normal1 = [
           {
                     "featureType": "road",
